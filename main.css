@@ -1,0 +1,446 @@
+/* general styling */
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family: "Open Sans", Arial, sans-serif;
+}
+
+.nav-title, th{
+    font-weight: 600;
+    font-family: "Montserrat", Arial, sans-serif;
+}
+
+h1 {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 3rem; 
+    margin: 0;
+}
+
+h2 {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 1.20rem;
+    margin-bottom: 0.25rem;
+    font-weight: 700;
+}
+
+img{
+   width: 100%;
+   height: auto;
+   image-orientation: none;
+   object-fit: cover;
+}
+
+
+
+hr{
+    color: #b3b3b3;
+    background-color: #b3b3b3;
+    margin-top: 2rem;
+}
+
+/* navigation bar */
+
+/* 
+    from: https://stackoverflow.com/questions/19089933/how-to-position-two-elements-side-by-side-using-css
+    and: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_topnav
+*/
+
+#nav-bar{
+    background-color:#13795f;
+    color: white;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:4;
+}
+
+.nav-title{
+    float: left;
+    margin-left: 1rem;
+}
+
+#nav-bar a{
+    float: right;
+    color:white;
+    text-decoration: none;
+    text-align: center;
+    padding-right: 3rem;
+    padding-top: 1rem;
+}
+
+#nav-bar a:focus{
+    color: #b3b3b3;
+    text-decoration: none;
+}
+
+
+#nav-bar a:hover{
+    color: #b3b3b3;
+    text-decoration: none;
+}
+
+
+/* main content */
+#main-content {
+    margin-top: 1rem;
+}
+
+#main-content p{
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #4d4d4d;
+}
+
+.home-title{
+    padding-top: 5rem;
+    font-size: 2.5rem;
+    width: 100%;
+}
+
+.home-p{
+    color: #4d4d4d;
+    width: 100%;
+}
+
+.organization-tag{
+    font-weight: 150;
+    color: gray;
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+.button{
+    background-color: #13795f;
+    color:white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.8rem 1.1rem;
+    text-align: center;
+    text-decoration: none;
+    cursor:pointer;
+    display: inline-block;
+} 
+
+.button:hover, .button:focus{
+    background-color: lightgray;
+}
+
+.top-img{
+    padding-top: 3rem;
+    height: 25rem;
+    object-fit: cover; /* from: https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit */
+}
+
+.other-grants-text{
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+}
+
+/* table */
+
+/* from: https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro*/
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-left{
+    background-color: #88B29F;
+    font-weight: 600;
+}
+
+td{
+    border: 0.1rem solid #6C8A82;
+    background-color: #F8EEE1;
+    text-align: left;
+    padding: 1.5rem;
+}
+
+/* grant cards 
+    very helpful flexbox guide: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+*/
+
+#related-grants{
+    float: left;
+    padding-bottom: 3rem;
+}
+
+.organize-grant-cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grant-card{
+    background-color: #F8EEE1;
+    width: 100%;
+    height: 30rem;
+    max-width: 27rem;
+    min-width: 18rem;
+    margin: 0.5rem;
+
+    flex-basis: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.grant-name{
+    padding-top: 1.75rem;
+    padding-left: 1rem;
+    font-size: 1.375rem;
+    margin:0;
+}
+
+.grant-card img{
+    padding: 0;
+    width: 100%;
+    height: auto;
+    order: -1;
+}
+
+/* z-index and top properties learned from: https://www.tutorialspoint.com/overlapping-elements-with-z-index-using-css */
+
+.category-tag-container{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 30%;
+    transform: translate(0, 0);
+}
+
+.category-tag{
+    background-color: white;
+    color: #13795f;
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.9375rem;
+    font-weight: 700;
+
+    border-radius: 0.5rem;
+    border: 0.20rem solid #13795f;
+
+    margin-left: 0.2rem;
+    margin-top: 0;
+    margin-bottom:0;
+    padding: 0.5rem 0.7rem;
+
+    z-index: 3;
+    top: -1.8rem;
+}
+
+.grant-subheading{
+    width: 100%;
+    font-weight: 550;
+    font-size: 1rem;
+    padding-left: 1rem;
+    margin-top: 0;
+    color: #4d4d4d;
+}
+
+.grant-p{
+    width: 95%;
+    font-weight: 400;
+    font-size: 0.9375rem;
+    padding-left: 1rem;
+    margin-top: 0.25rem;
+    color: #4d4d4d;
+}
+
+.mini-space1{
+    padding-bottom: 0.5rem;
+}
+
+.mini-space2{
+    padding-bottom: 2.25rem;
+}
+
+.grant-card .button{
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    width: 8rem;
+    position: absolute;
+    top: 88%;
+}
+
+
+
+/* filter bar <3 */
+
+#filtering{
+    padding: 0 1rem; 
+}
+
+.filter-title{
+    padding: 1.5rem 0 0.5rem;
+
+}
+/*
+.filter-bar{
+    display: flex;
+    background-color: #13795f;
+}
+.filter-bar h3{
+    flex: 1;
+    color: white;
+    padding: 0 5rem;
+    font-weight: 600;
+}
+
+.desktop-filter{
+    display: none;
+}
+
+.mobile-filter{
+    padding: 0 1rem;
+} */
+
+/* nav bar (with javascript now!) */
+
+.desktop-nav {
+    border-radius: 1rem;
+    border:1px solid #ffffff;
+    background-color: #ffffff;
+    grid-column: 2;
+}
+.dropdown-desktop {
+    
+    display: none;
+    position: relative;
+    background-color:#ffffff;
+    box-shadow: 0px 8px 16px 0px rgba(121, 121, 121, 0.2);
+    z-index: 5;
+  }
+  
+  .dropdown-desktop a {
+    grid-column: 1/16;
+    float: none;
+    background-color: #ffffff;
+    color:#13795f;
+    padding: 0.25rem;
+    text-decoration: none;
+    display: block;
+    z-index: 5;
+    padding: 1rem;
+  }
+  
+  .dropdown-desktop a:hover {
+    background-color: lightgray;
+  }
+  
+  .show {
+    display: block;
+  }
+
+  .desktop-nav {
+    z-index: 5;
+    overflow: hidden;
+  }
+
+  .desktop-nav a {
+    font-size: 1rem;
+    color:#13795f;
+    text-align: center;
+    z-index: 5;
+    text-decoration: none;
+   
+  } 
+
+.hidden {
+    display: none;
+}
+
+.dropdown {
+    
+    background-color: white;
+
+}
+.dropdown .dropbtn {
+    
+    background-color: #13795f;
+    cursor: pointer;
+    font-size: 1rem;  
+    border: none;
+    outline: none;
+    color: white;
+    margin: 0;
+    padding: 1.25rem;
+    width: 100%;
+    z-index: 5;
+    font-weight: 600;
+}
+  
+
+.dropdown .dropbtn1 {
+    background-color: #13795f;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1rem;  
+    border: none;
+    outline: none;
+    color: white;
+    margin: 0;
+    padding: 1.25rem;
+    z-index: 5;
+    font-weight: 600;
+}
+  
+.dropdown .dropbtn2 {
+    background-color: #13795f;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1rem;  
+    border: none;
+    outline: none;
+    color: white;
+    margin: 0;
+    padding: 1.25rem;
+    z-index: 5;
+    font-weight: 600;
+    
+}
+  
+
+.dropdown .dropbtn3 {
+    background-color: #13795f;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1rem;  
+    border: none;
+    outline: none;
+    color: white;
+    margin: 0;
+    padding: 1.25rem;
+    z-index: 5;
+    font-weight: 600;
+}
+
+
+.dropbtn:hover, .dropbtn:focus, .dropbtn1:hover, .dropbtn1:focus, .dropbtn2:hover, .dropbtn2:focus, .dropbtn3:hover, .dropbtn3:focus, .dropbtn4:hover, .dropbtn4:focus {
+    background-color: #b3b3b3;
+}
+
+.reset-button{
+    background-color: #13795f;
+    color:white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.4rem;
+    margin: 0.4rem;
+    text-align: center;
+    text-decoration: none;
+    cursor:pointer;
+    display: inline-block;
+}
+
+.reset-button:hover, .reset-button:focus{
+    background-color: #b3b3b3;
+}
