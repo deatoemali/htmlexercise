@@ -24,11 +24,6 @@
   src: url(external-fonts/DMSerifText-Regular.ttf);
 } 
 
-@font-face {
-  font-family: 'helvetica';
-  
-} 
-
 section {
   padding-top: 1rem;
 }
