@@ -22,6 +22,15 @@
 @font-face {
   font-family: 'DMSerif';
   src: url(external-fonts/DMSerifText-Regular.ttf);
+} 
+
+@font-face {
+  font-family: 'helvetica';
+  src: url(external-fonts/);
+} 
+
+section {
+  padding-top: 1rem;
 }
 
 span {
