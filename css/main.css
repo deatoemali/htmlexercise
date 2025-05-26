@@ -170,7 +170,6 @@ input:focus {
 img {
   padding-top: 1rem;
   transition-duration: 0.5s;
-  transition-property: scale opacity;
 }
 
 img:hover {
@@ -187,7 +186,7 @@ img:active {
 
 .Headings {
   font-family: 'edwardian', sans-serif;
-  font-style: bold;
+  font-weight: bold;
   font-size: 6rem;
 }
 
