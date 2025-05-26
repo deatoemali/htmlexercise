@@ -65,9 +65,22 @@ code {
   INTERACTIVE ELEMENTS -------------------
 */
 
+.in-text {
+  color:darkred;
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
+
+.in-text:hover {
+  color:red;
+}
+
+.in-text:focus {
+  text-decoration: underline;
+}
+
 .grid {
   /* background-color: rgb(84, 19, 19); */
-
   display: grid;
   padding: 0 1rem;
   grid-template-columns: 3fr 0.3fr 0.3fr 0.3fr 0.3fr;
@@ -78,7 +91,6 @@ code {
 } 
 
 .nav-title {
-  
   border: 3px;
   border-width: 3px;
 }
@@ -119,6 +131,56 @@ code {
   background-color: rgb(200,200,200);
 }
 
+#input-label {
+  align-items: center;
+  justify-items: center;
+}
+
+label {
+  font-family: 'instrument', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  font-style: italic;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+input {
+  line-height: 2rem;
+  border:none;
+  border-bottom: 2px solid grey;
+  width: 40%;
+  transition-duration: 0.5s;
+}
+
+input[type=text]{
+  padding-left:.5rem;
+}
+
+input:hover {
+  background-color: rgb(214, 214, 214);
+  border-radius: 0.4rem;
+}
+
+input:focus {
+  outline:2px solid black;
+  border-radius: .5rem;
+}
+
+img {
+  padding-top: 1rem;
+  transition-duration: 0.5s;
+  transition-property: scale opacity;
+}
+
+img:hover {
+  opacity: 0.7;
+}
+
+img:active {
+  scale: 0.8;
+}
+
 /* 
   TEXT ELEMENTS -------------------
 */
@@ -143,11 +205,16 @@ code {
 }
 
 .text {
-  font-family: 'DMSerif', sans-serif;
-  font-weight: lighter;
+  font-family: 'Times New Roman', sans-serif;
   font-size: 1rem;
 }
 
+.longtext {
+  max-width: 70%;
+}
+
+
+/* -------- COMBINED ELEMENTS -------- */
 #about-us-grid {
   display: grid;
   padding:0;
